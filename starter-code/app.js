@@ -168,6 +168,7 @@ let Student = function(name, age, hometown) {
   this.hometown = hometown;
 }; 
 
+
 let joe = new Student('Joe', 'Schmoe', 100);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
