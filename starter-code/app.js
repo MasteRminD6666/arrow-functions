@@ -113,13 +113,13 @@ let sum = function(a, b, c, d) {
 };
 
 // Arrow function 
-const Arrowsum = (a,b,c,d) => `${a} +${b} +${c} +${d} = ${a+b+c+d}`; 
+const Arrowsum = (a,b,c,d) => `${a} +${b} +${c} +${d} = ${a+b+c+d}`;  
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
+let objectLit = function() { 
   return {
     key1: 'value1',
     key2: 'value2',
@@ -127,7 +127,7 @@ let objectLit = function() {
   };
 };
 // Arrow
-const ArrowObjectLint = Array => ({
+const ArrowObjectLint = Array => ({ 
     key1: Array[0],
     key2: Array[1],
     key3: Array[3]
@@ -137,13 +137,13 @@ const ArrowObjectLint = Array => ({
 console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
+let sumAndProduct = function(a, b) { 
   let sum = a + b;
   let product = a * b;
   return [sum, product];
 };
 // Arrow 
-const ArrowSumAndProduct = (a,b) => {
+const ArrowSumAndProduct = (a,b) => { 
   let sum = a + b;
   let product = a * b;
   return [sum, product];
@@ -153,7 +153,7 @@ const ArrowSumAndProduct = (a,b) => {
 // console.log(ArrowSumAndProduct(3, 9));
 
 
-let message = function(name) {
+let message = function(name) { 
   return `Hello, ${name}!`;
 };
 const ArrowMessage = name => `Hello, ${name}!` 
@@ -162,7 +162,7 @@ const ArrowMessage = name => `Hello, ${name}!`
 // console.log(ArrowMessage('Allie'));
 
 
-let Student = function(name, age, hometown) {
+let Student = function(name, age, hometown) { 
   this.name = name;
   this.age = age;
   this.hometown = hometown;
