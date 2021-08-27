@@ -166,7 +166,7 @@ let Student = function(name, age, hometown) {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
-};
+}; 
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
