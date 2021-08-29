@@ -118,6 +118,8 @@ const Arrowsum = (a,b,c,d) => `${a} +${b} +${c} +${d} = ${a+b+c+d}`;
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(sum(1, 2, 3, 4));
 
+//console.log('Arrow output',Arrowsum(1, 2, 3, 4));
+
 
 let objectLit = function() { 
   return {
@@ -135,6 +137,7 @@ const ArrowObjectLint = Array => ({
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(objectLit());
+console.log('Arrow output',ArrowObjectLint());
 
 
 let sumAndProduct = function(a, b) { 
@@ -149,8 +152,8 @@ const ArrowSumAndProduct = (a,b) => {
   return [sum, product];
 }
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(sumAndProduct(3, 9));
-// console.log(ArrowSumAndProduct(3, 9));
+console.log(sumAndProduct(3, 9));
+console.log('Arrow output',ArrowSumAndProduct(3, 9));
 
 
 let message = function(name) { 
@@ -158,8 +161,8 @@ let message = function(name) {
 };
 const ArrowMessage = name => `Hello, ${name}!` 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(message('Allie'));
-// console.log(ArrowMessage('Allie'));
+console.log(message('Allie'));
+console.log('Arrow output',ArrowMessage('Allie'));
 
 
 let Student = function(name, age, hometown) { 
@@ -167,17 +170,16 @@ let Student = function(name, age, hometown) {
   this.age = age;
   this.hometown = hometown;
 }; 
+// Arrow functions cant be used as a  constructor  cannot be called with the new keyword.
 
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this code to break!
-// console.log(joe);
+console.log(joe);
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
-
-
 
 Student.prototype.greeting = function() {
   return `Hi, my name is ${this.name}`;
@@ -185,18 +187,16 @@ Student.prototype.greeting = function() {
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log( joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
-
-
 
 Student.courseName = function() {
   return 'This student is enrolled in Code 301.';
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
@@ -207,17 +207,17 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// this to refer to Student obj
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// this is undefined 
 // 3. Explain why "this" is different when an arrow function is used.
-//
+//because arrow functions do not have a prototype property and they cannot be used with new and don’t have an arguments object also When using callbacks inside methods the arrow function doesn’t define its own this
