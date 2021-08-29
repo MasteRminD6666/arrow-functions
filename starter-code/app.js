@@ -218,6 +218,7 @@ console.log(joe.scopeArrow());
 // 1. What is "this" when joe.scope() is invoked?
 // this to refer to Student obj
 // 2. What is "this" when joe.scopeArrow() is invoked?
-// this is undefined 
+// this is undefined   
+// The value of this is resolved to that of the closest non-arrow parent function or the global object otherwise
 // 3. Explain why "this" is different when an arrow function is used.
 //because arrow functions do not have a prototype property and they cannot be used with new and don’t have an arguments object also When using callbacks inside methods the arrow function doesn’t define its own this
